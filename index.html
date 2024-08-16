@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar com Menu Hambúrguer e Carrosséis</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="images/logoalpha3.png" alt="Logo">
+        </div>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Sobre</a></li>
+            <li><a href="#">Serviços</a></li>
+            <li><a href="#">Contato</a></li>
+            <li><a href="#" class="portal-button">Portal Acadêmico</a></li>
+        </ul>
+        <div class="hamburger" onclick="toggleMenu()">
+            &#9776;
+        </div>
+    </nav>
+
+    <div id="menu-mobile" class="menu-mobile">
+        <div class="menu-close" onclick="toggleMenu()">&#10005;</div>
+        <ul class="menu-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Sobre</a></li>
+            <li><a href="#">Serviços</a></li>
+            <li><a href="#">Contato</a></li>
+            <li><a href="#" class="portal-button">Portal Acadêmico</a></li>
+        </ul>
+    </div>
+
+    <!-- Carrossel Principal -->
+<div class="owl-carousel owl-theme">
+    <div class="item1" style="background-image: url('images/banneralpha.jpg');">
+        <div class="overlay">
+            <div class="content">
+               
+            </div>
+        </div>
+    </div>
+    
+    <!-- Adicione mais slides aqui -->
+</div>
+
+     <!-- sessão cursos  -->
+
+     
+
+<!-- sessão cursos  -->
+<section class="courses-section">
+    <h2>Nossos Cursos</h2>
+    <div class="owl-carousel courses-carousel">
+        <div class="item">
+            <div class="box">
+                <img src="images/1.png" alt="Curso 1">
+                <div class="detail">
+                    <h5>Curso 1</h5>
+                    <p>Descrição do Curso 1</p>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="box">
+                <img src="images/3.png" alt="Curso 2">
+                <div class="detail">
+                    <h5>Curso 2</h5>
+                    <p>Descrição do Curso 2</p>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="box">
+                <img src="images/2.png" alt="Curso 3">
+                <div class="detail">
+                    <h5>Curso 3</h5>
+                    <p>Descrição do Curso 3</p>
+                </div>
+            </div>
+        </div>
+        <!-- Adicione mais itens aqui -->
+    </div>
+    <div class="wave"></div>
+</section>
+
+
+
+
+
+
+<!-- Seção de Depoimentos -->
+<section class="testimonials-section">
+    <h2 class="testimonials-title">Depoimentos dos Alunos</h2>
+    <div class="owl-carousel testimonials-carousel">
+        <div class="testimonial-item">
+            <div class="testimonial-content">
+                <p>"Os cursos são excelentes! A qualidade do material e a didática dos professores são impecáveis."</p>
+                <h5 class="testimonial-name">João Silva</h5>
+                <span class="testimonial-course">Aluno de Desenvolvimento Web</span>
+            </div>
+            <div class="testimonial-photo">
+                <img src="images/teste13.png" alt="João Silva">
+            </div>
+        </div>
+        <div class="testimonial-item">
+            <div class="testimonial-content">
+                <p>"Uma experiência incrível! Aprendi muito e estou aplicando os conhecimentos adquiridos em meu trabalho."</p>
+                <h5 class="testimonial-name">Maria Oliveira</h5>
+                <span class="testimonial-course">Aluna de Segurança da Informação</span>
+            </div>
+            <div class="testimonial-photo">
+                <img src="images/teste13.png" alt="Maria Oliveira">
+            </div>
+        </div>
+        <!-- Adicione mais depoimentos aqui -->
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.courses-carousel').owlCarousel({
+                items: 3,
+                loop: true,
+                nav: false,
+                dots: true,
+                margin: 20,
+                autoplay: true,
+                autoplayTimeout: 3000,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    600: {
+                        items: 2
+                    },
+                    1000: {
+                        items: 3
+                    }
+                }
+            });
+        });
+    </script>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.owl-carousel').owlCarousel({
+                items: 1,
+                loop: true,
+                nav: true,
+                dots: true,
+                autoplay: true,
+                autoplayTimeout: 3000
+            });
+
+            $('.courses-carousel').owlCarousel({
+                items: 3,
+                loop: true,
+                nav: true,
+                dots: true,
+                margin: 20,
+                autoplay: true,
+                autoplayTimeout: 3000
+            });
+        });
+
+        function toggleMenu() {
+            const menu = document.getElementById('menu-mobile');
+            menu.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
